@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "PerplexityモデルSwitcher",
+  "version": "1.0",
+  "description": "Perplexity AIのモデルをショートカットキーで切り替える拡張機能",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "switch_model": {
+      "suggested_key": {
+        "default": "Ctrl+M",
+        "mac": "Command+M"
+      },
+      "description": "AIモデルを切り替える"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
